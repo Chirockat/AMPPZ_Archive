@@ -22,7 +22,7 @@ int main() {
     getline(cin, line);
     stringstream ss3(line);
     while (ss3 >> tab3[n3]) n3++;
-    
+    // program
     for (int i = 0; i < n2; i++){
 		for (int j = 0; j < n3; j++){
 			if (abs(tab2[i] - tab3[j]) <= tab1[2]){
