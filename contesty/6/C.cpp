@@ -19,5 +19,8 @@ int main() {
         cin >> number;
         s.insert(number);
     }
+
     cout << s.size();
+
+    
 }
