@@ -24,6 +24,10 @@ int main() {
     }
     
     sort(v.begin(), v.end(), [](auto &a, auto &b) {
+        // bez tego kod nie dziala prawidlowo dla n > 16
+        if (a.second == b.second) {
+            return a.first < b.first; 
+        }
         return a.second < b.second;
     });
 
