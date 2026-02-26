@@ -12,6 +12,7 @@ int main() {
     vector <int32_t> x;
     int32_t x_i;
 
+
     for (int i = 0; i < n; i++) {
         cin >> x_i;
         x.push_back(x_i);
