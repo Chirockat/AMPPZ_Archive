@@ -1,3 +1,4 @@
+
 #include<iostream>
 #include<vector>
 #include<numeric> 
@@ -22,23 +23,46 @@ int main() {
     int64_t a = 1;
     int64_t b = n * t;
 
-    int64_t sum_a;
+    int64_t sum_a = 0;
     int64_t sum_b;
-    int64_t local_best;
+    int64_t previous_a;
 
     int64_t best_sum = INT64_MAX;
 
-
+    // ta petla zmniejsza rozwiazanie az bedzie mniejsze od t
     while(true) {
-        sum_a = 0;
-        sum_b = 0;
-        local_best = 0;
-
-
+        previous_a = sum_a;
         for (int i = 0; i < n; i++) {
             sum_a += a / arr[i];
-            sum_b += b / arr[i];
         }
+        if (sum_a >= t) {
+            a = a/2;
+        }
+        else {
+            break;
+        }
+        
+    }
+    
+    // ta petla zwieksza rozwiazanie az bedzie rowne lub wieksze t
+    while (true) {
+        for (int i = 0; i < n; i++) {
+            sum_a += a / arr[i];
+            sum_b += a / arr[i];
+        }
+        
+
+    }
+
+
+    cout << best_sum;
+
+}
+
+
+
+
+
         // mniejszy prog nie spelnia targetu - biezemy gorny zakres
         if (sum_a < t) {
             a = b/2;
@@ -56,8 +80,3 @@ int main() {
         else {
             break;
         }
-    }
-
-    cout << best_sum;
-
-}
