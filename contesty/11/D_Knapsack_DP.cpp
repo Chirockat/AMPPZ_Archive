@@ -4,9 +4,6 @@
 
 using namespace std;
 
-// sam bym tego za chiny nie zrobił
-// to trzeba zapamiętać po prostu
-
 int main () {
     int32_t n, x;
     cin >> n >> x;
