@@ -19,6 +19,8 @@ int main() {
         sum_students += room_students;
     }
     
+    // dziwna konstrukcja dla sortowania od najwiekszego 
+    // do najmniejszego, warto zapamietac
     sort(pokoje.begin(), pokoje.end(), greater<int>());
 
     // jesli jacys studenci sa, to co najmniej 1 pokój bedzie zajety
